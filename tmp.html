@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="js/jquery-1.12.4.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/cony-common.css">
+  <!-- Start WOWSlider -->
+  <link rel="stylesheet" type="text/css" href="css/wowslider_style.css"/>
+  <!-- End WOWSlider -->
+  <!-- 全屏滚动css -->
+  <link rel="stylesheet" href="css/fullscreen.css">
+  <!--  skill circle-->
+  <link rel="stylesheet" href="css/skill_circle1.css">
+  <!-- cony owns -->
+  <link rel="stylesheet" href="css/main.css">
+  <title>Document</title>
+  <style>
+    body{
+      background: rgba(20,150,16,0.3);
+    }
+  </style>
+</head>
+<body>
+<div class="middleContent">
+  <div class="surePass">
+    <div class="anyield" innerText="HTML+HTML5">
+      <p>HTML+HTML5</p>
+    </div>
+    <canvas class="circleRun" data-run="0" id="canvasThree0" amout="1000" nowData="1000"></canvas>
+  </div>
+  <div class="surePass">
+    <div class="anyield" innerText="CSS+CSS3">
+      <p>CSS+CSS3</p>
+    </div>
+    <canvas class="circleRun" data-run="0" id="canvasThree1" amout="1000" nowData="1000"></canvas>
+  </div>
+  <div class="surePass">
+    <div class="anyield" innerText="Javascript">
+      <p>Javascript</p>
+    </div>
+    <canvas class="circleRun" data-run="0" id="canvasThree2" amout="1000" nowData="1000"></canvas>
+  </div>
+  <div class="surePass">
+    <div class="anyield" innerText="Jquery">
+      <p>Jquery</p>
+    </div>
+    <canvas class="circleRun" data-run="0" id="canvasThree3" amout="1000" nowData="1000"></canvas>
+  </div>
+  <div class="surePass">
+    <div class="anyield" innerText="Bootstrap5">
+      <p>Bootstrap</p>
+    </div>
+    <canvas class="circleRun" data-run="0" id="canvasThree4" amout="1000" nowData="1000"></canvas>
+  </div>
+</div>
+<script src="js/zcircleMove1.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+
+  $(function () {
+    var onceMouseWheel = 1;
+    $(document).mousewheel(function () {
+      if (onceMouseWheel) {
+        skillCircleLoad();
+      }
+      if ($('.skills').hasClass("comeout")) {
+        onceMouseWheel = 1;
+      }
+    });
+    $('.wrapBox').on('touchend',function () {
+      if (onceMouseWheel) {
+        skillCircleLoad();
+      }
+      if ($('.skills').hasClass("comeout")) {
+        onceMouseWheel = 1;
+      }
+    });
+    $('.nav-right li').on('click', function () {
+      skillCircleLoad();
+    });
+    $('.navigation li').on('click', function () {
+      skillCircleLoad();
+    });
+
+    function skillCircleLoad() {
+      if ($('.skills').hasClass("boxActive")) {
+        Draw();
+        onceMouseWheel = 0;
+      }
+    }
+
+    //主动触发resize
+    $(window).trigger('resize');
+  });
+
+  //skill resize窗口变化加载.
+  var TimerResize;
+  $(window).on('resize', function () {
+    clearTimeout(TimerResize);
+    TimerResize = setTimeout(function () {
+      Draw();
+    }, 150);
+  });
+
+  function Draw() {
+    runCircle(
+      {
+        obj: 'canvasThree0',
+        percent: 0.9,
+        url: 'images/h5icon.png',
+        circleBottomColor: "#e6eaed",//圆环底色
+        innerColorStart: '#f98d5c',  //内部圆环 渐变色
+        innerColorEnd: '#fe4c1e',
+        titleIndex: '0'
+      }
+    );
+    runCircle(
+      {
+        obj: 'canvasThree1',
+        percent: 0.85,
+        url: 'images/cssicon.png',
+        innerColorStart: '#18b8ec',  //内部圆环 渐变色
+        innerColorEnd: '#0071bf',
+        titleIndex: '1'
+      }
+    );
+    runCircle(
+      {
+        obj: 'canvasThree2',
+        percent: 0.8,
+        url: 'images/jsicon.png',
+        innerColorStart: '#ffd771',  //内部圆环 渐变色
+        innerColorEnd: '#e7b100',
+        titleIndex: '2'
+      }
+    );
+    runCircle(
+      {
+        obj: 'canvasThree3',
+        percent: 0.8,
+        url: 'images/jqicon.png',
+        innerColorStart: '#81d8ff',  //内部圆环 渐变色
+        innerColorEnd: '#19b4f9',
+        titleIndex: '3'
+      }
+    );
+    runCircle(
+      {
+        obj: 'canvasThree4',
+        percent: 0.7,
+        url: 'images/bsicon.png',
+        innerColorStart: '#8d4a72',  //内部圆环 渐变色
+        innerColorEnd: '#522e63',
+        titleIndex: '4'
+      }
+    )
+  }
+
+</script>
+</body>
+</html>

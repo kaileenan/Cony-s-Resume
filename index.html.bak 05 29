@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Web前端工程师简历</title>
+  <link rel="icon" href="images/cony.ico" type="image/x-ico">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/cony-common.css">
+  <!-- Start WOWSlider -->
+  <link rel="stylesheet" type="text/css" href="css/bak/wowslider_style.css"/>
+  <script src="js/jquery.js"></script>
+  <!-- End WOWSlider -->
+  <!-- 全屏滚动css -->
+  <link rel="stylesheet" href="css/bak/fullscreen.css">
+  <!-- cony owns -->
+  <link rel="stylesheet" href="css/main.css">
+  <!--[if IE 9]>
+    <script type="text/javascript">
+      window.location = "/defence_ie9.html";
+    </script>
+  <![endif]-->
+</head>
+<body>
+<div class="wrapBox">
+  <div class="page-mask"></div>
+  <div class="home-title">
+    <img src="images/hound.jpg" alt="" class="img-circle tx1">
+    <img src="images/hound.jpg" alt="" class="img-circle tx2">
+    <h1 class="en-tit">
+      <span>Cony</span>'s Resume
+    </h1>
+    <h1 class="cn-tit">
+      <span>刘&nbsp;彪</span>的  《简历》
+    </h1>
+  </div>
+  <!--第一屏-->
+  <div class="box page1">
+    <div class="home-face">
+      <div class="mask" style="display: block;">
+
+        <div class="home-center">
+          <div class="block">
+            <span class="circleLight"></span>
+            <div class="text">
+              <h3>Welcome,I'm Cony</h3>
+              <p class="en-text">Just do what you love and believe in, and <b>success</b> will come naturally.</p>
+              <span>我叫刘彪</span>
+              <span>一个拥有像素眼的前端开发工程师</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--  WOWSlider Start -->
+    <div id="wowslider-container0">
+      <div class="ws_images">
+        <ul>
+          <li><img src="images/slider-spring.jpg" alt="" title="" id="wows0_0"/></li>
+          <li><img src="images/slider-summer.jpg" alt="" title="" id="wows0_1"/></li>
+          <li><img src="images/slider-fall1.jpg" alt="" title="" id="wows0_2"/></li>
+          <li><img src="images/slider-winter.jpg" alt="" title="" id="wows0_3"/></li>
+        </ul>
+      </div>
+      <div class="ws_bullets">
+        <div>
+          <a href="#" title=""><span><img src="images/tooltips/slider01.jpg" alt=""/>1</span></a>
+          <a href="#" title=""><span><img src="images/tooltips/slider02.jpg" alt=""/>2</span></a>
+          <a href="#" title=""><span><img src="images/tooltips/slider03.jpg" alt=""/>3</span></a>
+          <a href="#" title=""><span><img src="images/tooltips/slider04.jpg" alt=""/>4</span></a>
+        </div>
+      </div>
+    </div>
+    <!-- WOWSlider End -->
+  </div>
+  <!--第一屏end-->
+  <!--第二屏-->
+  <div class="box page2">2</div>
+  <!--第二屏end-->
+  <!--第三屏-->
+  <div class="box page3">3</div>
+  <!--第三屏end-->
+  <!--第四屏-->
+  <div class="box page4">4</div>
+  <!--第四屏end-->
+  <!--第四屏-->
+  <div class="box page5">5</div>
+  <!--第四屏end-->
+
+
+<!--  navs -->
+  <div class="nav-right">
+    <ul></ul>
+  </div>
+  <div class="nav-top">
+    <div class="nav-toggle">
+      <div class="icon"></div>
+    </div>
+    <div class="nav-float">导航</div>
+  </div>
+  <div class="navigationBox ">
+    <div class="navigation">
+      <div class="left-bg"></div>
+      <ul>
+        <li><a href="#">回到首页</a></li>
+        <li><a href="#">自我简介</a></li>
+        <li><a href="#">技能掌握</a></li>
+        <li><a href="#">部分作品</a></li>
+        <li><a href="#">联系方式</a></li>
+      </ul>
+    </div>
+</div>
+</div>
+<!--<script src="js/browser.min.js"></script>-->
+<!--首页背景图片滚动-->
+<script type="text/javascript" src="js/bak/wowslider.js"></script>
+<script type="text/javascript" src="js/bak/wowslider_script.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--全屏滚动js-->
+<script src="js/bak/jquery.mousewheel.min.js"></script>
+<script src="js/bak/Fullscreen.js"></script>
+<!--cony owns-->
+<script src="js/index.js"></script>
+
+<script>
+  getweb();
+  function getweb(){
+    if(!!window.ActiveXObject || "ActiveXObject" in window){//判断IE .不支持 cube 动画样式;
+      jQuery("#wowslider-container0").wowSlider({effect:"louvers,brick",prev:"",next:"",duration:20*100,delay:45*100,width:640,height:360,autoPlay:true,autoPlayVideo:false,playPause:true,stopOnHover:false,loop:false,bullets:1,caption:true,captionEffect:"parallax",controls:true,controlsThumb:false,responsive:3,fullScreen:false,gestures:2,onBeforeStep:0,images:0});
+    }else {
+      jQuery("#wowslider-container0").wowSlider({effect:"louvers,brick,cube",prev:"",next:"",duration:20*100,delay:45*100,width:640,height:360,autoPlay:true,autoPlayVideo:false,playPause:true,stopOnHover:false,loop:false,bullets:1,caption:true,captionEffect:"parallax",controls:true,controlsThumb:false,responsive:3,fullScreen:false,gestures:2,onBeforeStep:0,images:0});
+    }
+    /*if (navigator.userAgent.indexOf("Firefox")!=-1){
+      console.log("Firefox");
+    };
+    if(navigator.userAgent.indexOf("Chrome")!=-1){
+      console.log("Chrome");
+    };*/
+  };
+</script>
+</body>
+</html>
